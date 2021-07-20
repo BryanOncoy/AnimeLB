@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">AnimeLB</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Login strings -->
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="password_not_valid">Contraseña incorrecta</string>
+    <string name="conditions_services">Acepto las Condiciones del Servicio y la Política de privacidad.</string>
+    <string name="log_in">Iniciar sesión</string>
+    <string name="email_not_valid">Este email no está registrado</string>
+    <string name="log_out">Cerrar sesión</string>
+    <!-- Register strings -->
+    <string name="new_user">Nuevo usuario</string>
+    <string name="confirm_new_password">Confirmar nueva contraseña</string>
+    <string name="email_already_exists">Email ya existente</string>
+    <string name="already_have_account">¿Ya tienes una cuenta? </string>
+    <string name="new_username_message">Por favor introduce tu nombre de usuario público. Este nombre servirá para que otros usuarios puedan interactuar contigo.</string>
+    <string name="register">Registrarse</string>
+    <!-- Change password strings -->
+    <string name="user">Usuario</string>
+    <string name="current_email">Email actual</string>
+    <string name="change_password">Cambiar contraseña</string>
+    <string name="current_password">Contraseña actual</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="confirm_password_error">La nueva contraseña no coincide</string>
+    <!-- App strings -->
+    <string name="next">CONTINUAR</string>
+    <string name="favorites">favoritos</string>
+    <string name="genres">géneros</string>
+    <string name="all">todos</string>
+    <!-- Genres key strings -->
+    <string name="category0">Acción</string>
+    <string name="category1">Aventuras</string>
+    <string name="category2">Comedia</string>
+    <string name="category3">Deportes</string>
+    <string name="category4">Drama</string>
+    <string name="category5">Ecchi</string>
+    <string name="category6">Escolares</string>
+    <string name="category7">Fantasía</string>
+    <string name="category8">Mecha</string>
+    <string name="category9">Psicológico</string>
+    <string name="category10">Romance</string>
+    <string name="category11">Seinen</string>
+    <string name="category12">Shoujo</string>
+    <string name="category13">Shounen</string>
+    <string name="category14">Sobrenatural</string>
+    <string name="category15">Suspenso</string>
+    <string name="category16">Terror</string>
+    <string name="category17">Yaoi</string>
+    <string name="category18">Yuri</string>
+    <!-- Genres value strings -->
+    <string name="categoryValue0">accion</string>
+    <string name="categoryValue1">aventura</string>
+    <string name="categoryValue2">comedia</string>
+    <string name="categoryValue3">deportes</string>
+    <string name="categoryValue4">drama</string>
+    <string name="categoryValue5">ecchi</string>
+    <string name="categoryValue6">escolares</string>
+    <string name="categoryValue7">fantasia</string>
+    <string name="categoryValue8">mecha</string>
+    <string name="categoryValue9">psicologico</string>
+    <string name="categoryValue10">romance</string>
+    <string name="categoryValue11">seinen</string>
+    <string name="categoryValue12">shoujo</string>
+    <string name="categoryValue13">shounen</string>
+    <string name="categoryValue14">sobrenatural</string>
+    <string name="categoryValue15">suspenso</string>
+    <string name="categoryValue16">terror</string>
+    <string name="categoryValue17">yaoi</string>
+    <string name="categoryValue18">yuri</string>
+    <!-- User messages strings -->
+    <string name="animes_fav_message">Añade a tus amigos para ver sus animes favoritos.</string>
+    <string name="user_detail_message">No tiene ningún anime guardado</string>
+    <string name="following">Siguiendo</string>
+    <string name="follow">Seguir</string>
+    <string name="add_friend">Añade un nuevo amigo</string>
+</resources>

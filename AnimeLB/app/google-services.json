@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "21769799440",
+    "project_id": "animelb-d9635",
+    "storage_bucket": "animelb-d9635.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21769799440:android:9238c994309df4c56fc795",
+        "android_client_info": {
+          "package_name": "com.lb.animelb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21769799440-jk26n3344bn2nu466vq989c3uk0u8j6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lb.animelb",
+            "certificate_hash": "7d13fb93913f7760985664e6680b3e39c0042b8f"
+          }
+        },
+        {
+          "client_id": "21769799440-nhbqj3tn0pciabt5e4hj4icrficn8ove.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZlOYXVqfHvcQc2e6KUkIw7RBo5ezrmro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21769799440-nhbqj3tn0pciabt5e4hj4icrficn8ove.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

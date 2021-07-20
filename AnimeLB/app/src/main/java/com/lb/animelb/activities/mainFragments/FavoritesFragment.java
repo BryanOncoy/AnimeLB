@@ -1,0 +1,113 @@
+package com.lb.animelb.activities.mainFragments;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.lb.animelb.R;
+import com.lb.animelb.adapters.AnimeInfoAdapter;
+
+import static com.lb.animelb.clases.User.currentUser;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link FavoritesFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class FavoritesFragment extends Fragment {
+    private RecyclerView recyclerView;
+    private TextView message;
+    private ImageView imageView;
+
+    public  AnimeInfoAdapter animeInfoAdapter;
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public FavoritesFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment FavoritosFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static FavoritesFragment newInstance(String param1, String param2) {
+        FavoritesFragment fragment = new FavoritesFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_favorites, container, false);
+
+        // Hooks
+        recyclerView = view.findViewById(R.id.recyclerViewFavorites);
+        message = view.findViewById(R.id.favoriteMs);
+        imageView = view.findViewById(R.id.narutoSad);
+        showAnimes();
+
+        showEmptyRecyclerView();
+
+        animeInfoAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+            @Override
+            public void onItemRangeChanged(int positionStart, int itemCount) { //Solo se invoca cuando se utiliza la función [ejemplo] notifyItemRangeChanged(position, mDatos.size);
+                showEmptyRecyclerView();
+                super.onItemRangeChanged(positionStart, itemCount);
+            }
+        });
+
+        return view;
+    }
+
+    private void showAnimes() {
+        animeInfoAdapter = new AnimeInfoAdapter(getContext(), currentUser.favAnimes);
+        recyclerView.setAdapter(animeInfoAdapter);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2, RecyclerView.VERTICAL, false));
+    }
+
+    public void showEmptyRecyclerView(){
+        if (animeInfoAdapter.getItemCount() == 0) {
+            message.setVisibility(View.VISIBLE);
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            message.setVisibility(View.INVISIBLE);
+            imageView.setVisibility(View.INVISIBLE);
+        }
+    }
+
+
+}
